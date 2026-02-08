@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Notes{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Notes</h2>
+    
+    {% for subject, notes in categorized_notes.items %}
+        <h3>{{ subject }}</h3>
+        <ul class="list-group">
+            {% for note in notes %}
+                <li class="list-group-item">
+                    <h5>{{ note.title }}</h5>
+                    <p>{{ note.content }}</p>
+                    <a href="{{ note.download_link }}" class="btn btn-primary" download>Download Note</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</div>
+{% endblock %}

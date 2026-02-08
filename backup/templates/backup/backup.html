@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Backup{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Backup</h2>
+    {% if message %}
+        <div class="alert alert-success">{{ message }}</div>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">Start Backup</button>
+    </form>
+</div>
+{% endblock %}
