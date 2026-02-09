@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.shortcuts import render, redirect
-from .backup import backup_files_to_s3, backup_database
+from .services.db_backup import backup_files_to_s3, backup_database
 from .restore import restore_database
 
 from django.contrib.auth.decorators import login_required
