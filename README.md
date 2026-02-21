@@ -24,7 +24,34 @@ Restore validation workflows
 
 🏗 Architecture
 
-(Insert diagram here)
+enterprise-data-backup-platform/
+│
+├── architecture/
+│   ├── enterprise_architecture.png
+│   └── DR_flow.md
+│
+├── infrastructure/
+│   ├── terraform/
+│   │   ├── rds.tf
+│   │   ├── s3.tf
+│   │   ├── backup_vault.tf
+│   │   └── iam.tf
+│
+├── backup_engine/
+│   ├── rds_backup.py
+│   ├── s3_version_manager.py
+│   ├── redshift_snapshot.py
+│   ├── retention_policy.py
+│   └── metadata_tracker.py
+│
+├── monitoring/
+│   ├── cloudwatch_metrics.py
+│   └── alerting.py
+│
+├── tests/
+│
+├── README.md
+└── requirements.txt
 
 🔐 Security
 
