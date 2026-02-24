@@ -24,6 +24,8 @@ Restore validation workflows
 
 🏗 Architecture
 
+```
+
 enterprise-data-backup-platform/
 │
 ├── architecture/
@@ -52,6 +54,8 @@ enterprise-data-backup-platform/
 │
 ├── README.md
 └── requirements.txt
+
+```
 
 🔐 Security
 
