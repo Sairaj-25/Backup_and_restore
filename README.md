@@ -1,6 +1,6 @@
 # Enterprise AI Data Platform
 
-A cloud-native Data Engineering and Generative AI platform built on AWS that collects, processes, stores, and analyzes enterprise data from multiple sources.
+A cloud-native Data Engineering and Generative AI platform built on Azure that collects, processes, stores, and analyzes enterprise data from multiple sources.
 
 The platform automates data ingestion, ETL pipelines, metadata management, and AI-powered document search using Retrieval-Augmented Generation (RAG).
 
@@ -8,7 +8,7 @@ The platform automates data ingestion, ETL pipelines, metadata management, and A
 
 # Project Goals
 
-- Build a scalable data lake on AWS.
+- Build a scalable data lake on Azure.
 - Automate data ingestion and ETL pipelines.
 - Improve data quality through validation.
 - Track metadata and pipeline execution.
@@ -43,17 +43,16 @@ The platform automates data ingestion, ETL pipelines, metadata management, and A
 
 ---
 
-## AWS Services
+## Azure Services
 
-- Amazon S3 Data Lake
-- AWS Lambda
-- Amazon RDS
-- Amazon SNS
-- Amazon CloudWatch
-- AWS IAM
-- AWS KMS
-- AWS Secrets Manager
-- EventBridge
+- Azure Data Lake Storage (ADLS)
+- Azure Functions
+- Azure SQL Database / MySQL
+- Azure Service Bus
+- Azure Monitor
+- Azure Identity & Access Management (IAM)
+- Azure Key Vault
+- Event Grid
 
 ---
 
@@ -62,7 +61,7 @@ The platform automates data ingestion, ETL pipelines, metadata management, and A
 - OCR for scanned documents
 - Document Parsing
 - Embedding Generation
-- Vector Database
+- Vector Database (Azure AI Search / Weaviate)
 - Semantic Search
 - Retrieval-Augmented Generation (RAG)
 - AI-powered Question Answering
@@ -72,9 +71,9 @@ The platform automates data ingestion, ETL pipelines, metadata management, and A
 ## Monitoring
 
 - Pipeline Health Dashboard
-- CloudWatch Metrics
-- CloudWatch Logs
-- SNS Alerts
+- Azure Monitor Metrics
+- Azure Monitor Logs
+- Service Bus Alerts
 - Pipeline Execution Tracking
 - Data Freshness Monitoring
 
@@ -101,7 +100,7 @@ The platform automates data ingestion, ETL pipelines, metadata management, and A
                       Data Validation & Cleaning
                                    |
                                    v
-                        Amazon S3 Data Lake
+                    Azure Data Lake Storage (ADLS)
                                    |
                                    |
                     +--------------+--------------+
@@ -118,7 +117,7 @@ The platform automates data ingestion, ETL pipelines, metadata management, and A
                         Embedding Generation
                                    |
                                    v
-                           Vector Database
+                        Vector Database
                                    |
                                    v
                       GenAI RAG Chat Assistant
@@ -150,7 +149,7 @@ enterprise-ai-data-platform/
 │   └── metadata_catalog.py
 │
 ├── storage/
-│   ├── s3_manager.py
+│   ├── adls_manager.py
 │   └── partition_manager.py
 │
 ├── genai/
@@ -160,7 +159,7 @@ enterprise-ai-data-platform/
 │   └── llm_chat.py
 │
 ├── monitoring/
-│   ├── cloudwatch.py
+│   ├── azure_monitor.py
 │   ├── alerting.py
 │   └── dashboard.py
 │
@@ -188,7 +187,7 @@ enterprise-ai-data-platform/
 
 ## Databases
 
-- PostgreSQL
+- Azure SQL Database
 - MySQL
 
 ## Data Engineering
@@ -200,20 +199,20 @@ enterprise-ai-data-platform/
 
 ## Cloud
 
-- Amazon S3
-- AWS Lambda
-- Amazon RDS
-- CloudWatch
-- SNS
-- IAM
-- KMS
-- Secrets Manager
+- Azure Data Lake Storage (ADLS)
+- Azure Functions
+- Azure SQL Database
+- Azure Monitor
+- Service Bus
+- Azure IAM
+- Azure Key Vault
+- Event Grid
 
 ## AI
 
 - LangChain
-- OpenAI / Google Gemini
-- FAISS / ChromaDB
+- Azure OpenAI / Google Gemini
+- Azure AI Search
 - Sentence Transformers
 
 ## DevOps
@@ -236,7 +235,7 @@ Validate
 Transform
       │
       ▼
-Load into S3 Data Lake
+Load into Azure Data Lake Storage
       │
       ▼
 Generate Metadata
@@ -255,12 +254,13 @@ RAG Chat Application
 
 # Security
 
-- IAM Least Privilege
-- KMS Encryption
-- Secrets Manager
+- Azure IAM Least Privilege
+- Encryption at Rest & Transit
+- Azure Key Vault
 - Environment Variables
 - No Hardcoded Credentials
 - Secure API Authentication
+- Managed Identities
 
 ---
 
@@ -276,21 +276,21 @@ The platform continuously monitors:
 - API failures
 - AI request metrics
 
-Alerts are sent using Amazon SNS.
+Alerts are sent using Azure Service Bus.
 
 ---
 
 # Future Improvements
 
-- Apache Airflow orchestration
-- Apache Spark support
-- Apache Kafka streaming
+- Azure Data Factory orchestration
+- Apache Spark support (Synapse Analytics)
+- Apache Kafka / Azure Event Hubs streaming
 - Apache Iceberg
 - Apache Hive
-- AWS Glue Data Catalog
-- Amazon Athena
-- OpenSearch integration
-- ML model monitoring
+- Azure Purview Data Catalog
+- Azure Synapse Analytics
+- Azure Cognitive Search integration
+- ML model monitoring (Azure ML)
 - Multi-region deployment
 
 ---
@@ -301,7 +301,7 @@ This project demonstrates practical experience in:
 
 - Data Engineering
 - ETL Pipelines
-- AWS Cloud
+- Azure Cloud
 - Data Lakes
 - Metadata Management
 - Pipeline Monitoring
